@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hexforge</title>
+<style>
+body{margin:0;background:#1c2431;color:#efe6d2;font:15px system-ui,sans-serif;text-align:center;padding-bottom:24px}
+h1{font:bold 40px Georgia,serif;margin:14px 0 4px;color:#d9a441}
+.stats{display:flex;gap:8px;justify-content:center;margin:8px}
+.stats span{background:#26334a;border:1px solid #3a4a68;border-radius:6px;padding:4px 10px}
+canvas{width:min(560px,96vw);background:#141c28;border:2px solid #3a4a68;border-radius:10px;touch-action:none;cursor:grab}
+button{background:#26334a;color:#efe6d2;border:1px solid #d9a441;border-radius:8px;padding:8px 12px;margin:3px;font:inherit;cursor:pointer}
+button:disabled{opacity:.4;cursor:default}button.sel{background:#d9a441;color:#1c2431}
+#msg{min-height:22px;margin:6px auto;max-width:540px;color:#ff9a6b}.help{opacity:.7;font-size:13px;max-width:540px;margin:8px auto}
+</style></head><body>
+<h1>Hexforge</h1>
+<div class="stats"><span>Gold <b id="gold"></b></span><span>Time <b id="time"></b></span><span>Secrets <b id="sec"></b></span></div>
+<canvas id="c" width="560" height="400"></canvas>
+<div id="msg"></div>
+<div><button data-k="mine">Gold mine 6g</button><button data-k="barracks">Barracks 8g</button></div>
+<div><button data-k="knight">Knight 3g</button><button data-k="archer">Archer 3g</button><button data-k="mage">Mage 4g</button></div>
+<div><button id="zi">Zoom +</button><button id="zo">Zoom -</button><button id="home">Capital</button><button id="new">New game</button></div>
+<p class="help">Drag to pan, scroll or use the zoom buttons. Pick Gold mine or Barracks, then tap a hex near your capital to build. With nothing picked, tap the map to set a rally point for your army. Destroy the red capital before yours falls, and hunt for 2 secrets (the purple rings on the minimap are hints).</p>
+<script src="game.js"></script></body></html>
